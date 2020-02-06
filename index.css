@@ -47,7 +47,7 @@ div {
     background-image: url(./img/background.jpg);
     color: whitesmoke;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     position:relative;
 }
 
