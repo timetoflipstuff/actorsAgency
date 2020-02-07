@@ -67,6 +67,10 @@ ul {
     list-style: none;
 }
 
+.nav-links {
+    display: flex;
+}
+
 .nav-links li {
     display: inline-block;
     padding: 0px 20px;
@@ -136,9 +140,6 @@ ul {
     .header-wrapper {
         padding: 0;
     }
-    .logo p {
-        display: none;
-    }
     header {
         padding: 15px;
     }
@@ -157,7 +158,10 @@ ul {
 }
 
 @media only screen and (max-width: 467px) {
+    .header {
+        justify-content: start;
+    }
     .nav-links li {
-        display: block;
+        padding: 0px 7px;
     }
 }

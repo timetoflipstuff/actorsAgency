@@ -1,5 +1,36 @@
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior-x: disabled;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
+    border: 0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+li, a, p {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    height: 260px;
 }
 
 .bg-image {
@@ -18,16 +49,51 @@
 
 .main-wrapper {
     position: relative;
-    padding-top: 40px;
-    padding-bottom: 120px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 0;
 }
 
 .background-wrapper {
     position: relative;
     background-color: white;
     margin: auto;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
+    -moz-box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
+    box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
+}
+
+.header-wrapper {
+    position: relative;
+    padding: 0;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #E34725
 }
 
 .actors-list {
@@ -37,84 +103,9 @@
     margin: 0 auto;
     height: auto;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    grid-gap: 60px;
-    padding: 20px 120px;
     box-sizing: border-box;
-}
-
-.actor {
-    background-color: whitesmoke;
-}
-
-img {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    height: 260px;
-}
-
-html {
-    scroll-behavior: smooth;
-    overscroll-behavior-x: disabled;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-li, a {
-    text-decoration: none;
-}
-
-.header-wrapper {
-    position: relative;
-    padding: 30px;
-}
-
-header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
-    background-color: whitesmoke;
-    -webkit-box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
-    -moz-box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
-    box-shadow: 10px 10px 63px -13px rgba(0,0,0,0.63);
-}
-
-header * {
-    color: black
-}
-
-.logo {
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav-links li a:hover {
-    color: #E34725
+    padding: 40px 40px;
+    grid-gap: 20px;
 }
 
 .ratio {
@@ -140,6 +131,7 @@ ul {
 }
 
 .actor {
+    background-color: whitesmoke;
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 96px -27px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 96px -27px rgba(0,0,0,0.75);
@@ -165,17 +157,33 @@ ul {
     color: #E34725;
 }
 
-@media only screen and (max-width: 768px) {
-    body {
-      padding: 0px;
+@media only screen and (min-width: 468px) {
+    .nav-links li {
+        padding: 0px 20px;
     }
-    .actors-list{
-        margin-top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-wrapper {
+        padding: 40px;
     }
-    .logo p {
-        display: none;
+    .header-wrapper {
+        padding: 30px;
+    }
+    .actors-list {
+        grid-gap: 60px;
+        padding: 20px 120px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .main-wrapper {
+        padding-top: 40px;
+        padding-bottom: 120px;
+        padding-left: 120px;
+        padding-right: 120px;
     }
     header {
-        padding: 15px;
+        padding: 15px 10%;
     }
 }
